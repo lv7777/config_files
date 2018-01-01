@@ -1,11 +1,22 @@
 # config_files
-べ・・・べつに晒したいわけじゃなくてプラグイン導入する前にgithub管理しろっていわれただけなんだからね！！！
 
-#VIMRC
-とか
-#vimperator
-とか
+# included
+## configured
+
+* powershell profile
+* zshrc(en route)
+
+## not configured
+
+
 * git
+    * gitconfig
+
+* vimrc
+
+# not included
+
+
 * eclipse
 * VisualStudio
 * vscode
@@ -17,4 +28,3 @@
 * PSIDE
 * flstudio
 * unity 
-などの設定ファイルもおいておこうな
