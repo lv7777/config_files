@@ -2,6 +2,10 @@
 $a = (Get-Host).UI.RawUI 
 $a.WindowTitle = "三( `・ω・)＼＼|| Powershell//／／(・ω・´ )三"
 
+function sudo {
+    Start-Process powershell.exe -Verb runas
+}
+
 function zsh {
 bash -c zsh
 }

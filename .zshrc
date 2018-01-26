@@ -97,3 +97,11 @@ zstyle ':vcs_info:*' formats "%F{green}%c%u[%b]%f"
 zstyle ':vcs_info:*' actionformats '[%b|%a]'
 precmd () { vcs_info }
 RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
+
+
+if [ -d /mnt/c/WINDOWS ] || [ $LC_WINDOWS10 ]; then
+  export WINDOWS10=0
+fi
+if [ $WINDOWS10 ]; then
+  export LC_WINDOWS10=$WINDOWS10
+fi
