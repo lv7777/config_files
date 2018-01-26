@@ -438,3 +438,20 @@ syntax enable
 "endif
 
 "End dein Scripts-------------------------
+
+" shareing clipboard(wsl only settings)
+nnoremap <silent>yy :.w !win32yank.exe -i<CR><CR>
+vnoremap <silent>y :w !win32yank.exe -i<CR><CR>
+nnoremap <silent>dd :.w !win32yank.exe -i<CR>dd
+vnoremap <silent>d x:let pos = getpos(".")<CR>GpVG:w !win32yank.exe -i<CR>VGx:call setpos(".", pos)<CR>
+nnoremap <silent>p :r !win32yank.exe -o<CR>
+vnoremap <silent>p :r !win32yank.exe -o<CR>
+
+" enabling allow key moving(wsl only settings) UPDATE: leastest conemu not needed
+"let windows10=$WINDOWS10
+"if windows10 == '0'
+"  set t_ku=(ctrl+v , UP arrow)
+"  set t_kd=(ctrl+v , DOWN arrow)
+"  set t_kr=(ctrl+v , RIGHT arrow)
+"  set t_kl=(ctrl+v , LEFT arrow)
+"endif
