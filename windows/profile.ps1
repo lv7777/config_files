@@ -2,19 +2,27 @@
 $a = (Get-Host).UI.RawUI 
 $a.WindowTitle = "三( `・ω・)＼＼|| Powershell//／／(・ω・´ )三"
 
+
+Set-Alias g git
+Set-Alias ll ls
+
 function sudo {
     Start-Process powershell.exe -Verb runas
 }
 
+function fish {
+    bash -c fish
+}
+
 function zsh {
-bash -c zsh
+    bash -c zsh
 }
 
 <#(｀・ω・´)
 function Prompt {
     if ($?) {
         #Write-Host "PS [" (Split-Path (Get-Location) -Leaf) "](=ω=.)" -NoNewLine -ForegroundColor "Green"
-	#Write-Host "PS [" (Split-Path (Get-Location) -Leaf) "]" -NoNewLine -ForegroundColor "Green"
+	    #Write-Host "PS [" (Split-Path (Get-Location) -Leaf) "]" -NoNewLine -ForegroundColor "Green"
 	Write-Host "PS [" (Get-Location) "](　´_ゝ｀)　" -ForegroundColor "Green"
         return "> "
     } else {
