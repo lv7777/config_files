@@ -52,17 +52,20 @@ alias la='ls -la --color=auto'
 alias ll='ls -l --color=auto'
 alias so='source'
 alias v='vim'
+alias g='git'
+alias gs='git status'
 #alias vi='vim'
 #alias vz='vim ~/.zshrc'
+#alias vv='vim ~/.vimrc'
 #alias c='cdr'
 # historyに日付を表示
 alias h='fc -lt '%F %T' 1'
 #alias cp='cp -i'
-#alias rm='rm -i'
+alias rm='rm -i'
 alias mkdir='mkdir -p'
 #alias ..='c ../'
 #alias back='pushd'
-#alias diff='diff -U1'
+alias diff='diff -U1'
 
 # プロンプト
 # 1行表示
