@@ -3,3 +3,5 @@
 # Please adapt and uncomment the following lines:
 	name =  oonuma ryouyu
 	email = oonuma.ry0uyu@gmail.com
+[credential]
+	helper = cache --timeout=3600
