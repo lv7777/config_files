@@ -1,0 +1,67 @@
+# wttr
+alias wttr="curl -4 'http://wttr.in/Osaka-shi?n2'"
+
+# config.fish
+# ported from zshrc
+
+# wsl or native linux
+# this variable is used for vimrc
+
+
+if test -d /mnt/c/; or test $LC_WINDOWS10
+  export WINDOWS10=0
+end
+if test $WINDOWS10;
+  export LC_WINDOWS10=$WINDOWS10
+end
+
+# kankyouhennsuu
+export LANG=ja_JP.UTF-8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# エイリアス
+#alias lst='ls -ltr --color=auto'
+alias l='ls -ltr --color=auto'
+alias la='ls -la --color=auto'
+alias ll='ls -lah --color=auto'
+alias so='source'
+alias sf='source ~/.config/fish/fish.config'
+alias v='vim'
+alias g='git'
+alias gs='git status'
+#alias vi='vim'
+alias vf='vim ~/.config/fish/config.fish'
+alias vv='vim ~/.vimrc'
+#alias c='cdr'
+# historyに日付を表示
+alias h='fc -lt '%F %T' 1'
+#alias cp='cp -i'
+alias rm='rm -i'
+alias mkdir='mkdir -p'
+#alias ..='c ../'
+#alias back='pushd'
+alias diff='diff -U1'

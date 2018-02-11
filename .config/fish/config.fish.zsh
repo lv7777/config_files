@@ -1,5 +1,5 @@
 # wttr
-alias wttr="curl -4 'http://wttr.in/Osaka-shi?n2'"
+alias wttr="curl -4 http://wttr.in"
 
 # 少し凝った zshrc
 # License : MIT
@@ -67,8 +67,6 @@ alias mkdir='mkdir -p'
 #alias ..='c ../'
 #alias back='pushd'
 alias diff='diff -U1'
-alias cdwin="cd /mnt/c/Users/levena"
-# TODO: get current user in windows
 
 # プロンプト
 # 1行表示
@@ -83,14 +81,17 @@ PROMPT="%(?.%{${fg[green]}%}.%{${fg[red]}%})%n${reset_color}@${fg[blue]}%m${rese
 %# "
 
 # mkdirとcdを同時実行
-function mkcd() {
-  if [[ -d $1 ]]; then
-    echo "$1 already exists!"
-    cd $1
+function mkcd
+  if test -d $argv[1]
+    #  then
+    echo "$argv[1] already exists!"
+    cd $argv[1]
   else
-    mkdir -p $1 && cd $1
-  fi
-}
+    # && is not used in fish
+    mkdir -p $argv[1]; and cd $argv[1]
+  end
+  #fi
+end
 
 # git設定
 #RPROMPT="%{${fg[blue]}%}[%~]%{${reset_color}%}"
@@ -104,11 +105,10 @@ zstyle ':vcs_info:*' actionformats '[%b|%a]'
 precmd () { vcs_info }
 RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
 
-setopt no_beep
-
-if [ -d /mnt/c/ ] || [ $LC_WINDOWS10 ]; then
-  export WINDOWS10=0
-fi
-if [ $WINDOWS10 ]; then
-  export LC_WINDOWS10=$WINDOWS10
-fi
+# FIXME: also fish is not used ||
+#if [ -d /mnt/c/WINDOWS ] || [ $LC_WINDOWS10 ]; then
+#  export WINDOWS10=0
+#fi
+#if [ $WINDOWS10 ]; then
+#  export LC_WINDOWS10=$WINDOWS10
+#fi
