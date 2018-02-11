@@ -2,16 +2,22 @@
 
 echo "copy .zshrc & .gitconfig"
 
-cp ~/.zshrc ~/.zshrc.bak
-rm ~/.zshrc
+exist_files() {
+    if [ -f ~/$1 ] && [ -n "$1" ];
+    then
+        echo "$1 is exist. cp and rm"
+        cp ~/$1 ~/$1.bak
+        #rm ~/$1
+    fi
+}
+
+exist_files ".zshrc"
 ln -s `pwd`/.zshrc ~/
 
-cp ~/.gitconfig ~/.gitconfig.bak
-rm ~/.gitconfig
+exist_files ".gitconfig"
 ln -s `pwd`/.gitconfig ~/
 
-cp ~/.vimrc ~/.vimrc.bak
-rm ~/.vimrc
+exist_files ".vimrc"
 ln -s `pwd`/.vimrc ~/
 
 #TODO
@@ -20,7 +26,13 @@ ln -s `pwd`/.vimrc ~/
 #curl -L https://get.oh-my.fish | fish
 #ln -s `pwd`/.config/fish/config.fish.zsh ~/.config/fish/config.fish
 
-echo "prepare dein vim"
-mkdir -p ~/.vim_runtime/repos/github.com/Shougo/dein.vim
-git clone https://github.com/Shougo/dein.vim.git \
-        ~/.vim_runtime/repos/github.com/Shougo/dein.vim
+if [! -d ~/.vim_runtime/repos/github.com/Shougo/dein.vim/bin/ ];
+then
+    echo "prepare dein vim"
+    mkdir -p ~/.vim_runtime/repos/github.com/Shougo/dein.vim
+    git clone https://github.com/Shougo/dein.vim.git \
+            ~/.vim_runtime/repos/github.com/Shougo/dein.vim
+else
+    echo "dain vim is aleady installed? check dir"
+fi
+
