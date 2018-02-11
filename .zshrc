@@ -67,6 +67,8 @@ alias mkdir='mkdir -p'
 #alias ..='c ../'
 #alias back='pushd'
 alias diff='diff -U1'
+alias cdwin="cd /mnt/c/Users/levena"
+# TODO: get current user in windows
 
 # プロンプト
 # 1行表示
@@ -101,6 +103,8 @@ zstyle ':vcs_info:*' formats "%F{green}%c%u[%b]%f"
 zstyle ':vcs_info:*' actionformats '[%b|%a]'
 precmd () { vcs_info }
 RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
+
+setopt no_beep
 
 if [ -d /mnt/c/ ] || [ $LC_WINDOWS10 ]; then
   export WINDOWS10=0
