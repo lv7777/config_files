@@ -28,3 +28,5 @@
 * PSIDE
 * flstudio
 * unity 
+* fish.config
+* bashrc
