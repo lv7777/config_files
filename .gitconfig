@@ -5,3 +5,17 @@
 	email = oonuma.ry0uyu@gmail.com
 [credential]
 	helper = cache --timeout=3600
+[core]
+    editor = vim
+    whitespace = trailing-space,space-before-tab,indent-with-non-tab
+#   autocrlf = input TODO:
+#   if your git is under 1.7, check under comment
+#   excludesfile=~/.gitignore_global
+[commit]
+    template = ~/.config/git/gitcommitmsg
+
+[alias]
+    check = checkout
+    ck = checkout
+    co = checkout
+
