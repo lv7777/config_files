@@ -448,6 +448,10 @@ if windows10 == '0'
   vnoremap <silent>d x:let pos = getpos(".")<CR>GpVG:w !win32yank.exe -i<CR>VGx:call setpos(".", pos)<CR>
   nnoremap <silent>p :r !win32yank.exe -o<CR>
   vnoremap <silent>p :r !win32yank.exe -o<CR>
+else
+    "linux
+    "set clipboard=unnamed, unnamedplus
+    set clipboard=unnamedplus
 endif
 
 " enabling allow key moving(wsl only settings) UPDATE: leastest conemu not needed
