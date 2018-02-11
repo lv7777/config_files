@@ -1,0 +1,18 @@
+[type] [scope] [comp] subject
+Why:
+Detail:
+
+# [type] is commit type
+# you should choose below type
+# add..... add new future
+# fix..... fix bug
+# mod..... modify code
+# docs.... write documents
+# test.... add test code
+# conf.... repo config(e.g. CI,lint,etc)
+# del..... delete files,future
+# other... other(e.g. change future)
+# [scope] is ??? TODO:
+# [comp] is this commit is complete
+# you should choose Y/N
+

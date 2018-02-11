@@ -36,3 +36,16 @@ else
     echo "dain vim is aleady installed? check dir"
 fi
 
+
+if [! -d ~/.gitignore_all_dir ];
+then
+    echo "prepare gitignore"
+    exist_files ".config/git/ignore"
+    ln -s `pwd`/.config/git/ignore ~/.config/git/ignore
+
+    mkdir -p ~/.gitignore_all_dir
+    git clone https://github.com/github/gitignore.git \
+            ~/.gitignore_all_dir
+else
+    echo "gitignore is aleady installed? check dir"
+fi
