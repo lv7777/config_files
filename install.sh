@@ -26,7 +26,7 @@ ln -s `pwd`/.vimrc ~/
 #curl -L https://get.oh-my.fish | fish
 #ln -s `pwd`/.config/fish/config.fish.zsh ~/.config/fish/config.fish
 
-if [! -d ~/.vim_runtime/repos/github.com/Shougo/dein.vim/bin/ ];
+if [ ! -d ~/.vim_runtime/repos/github.com/Shougo/dein.vim/bin/ ];
 then
     echo "prepare dein vim"
     mkdir -p ~/.vim_runtime/repos/github.com/Shougo/dein.vim
@@ -37,7 +37,7 @@ else
 fi
 
 
-if [! -d ~/.gitignore_all_dir ];
+if [ ! -d ~/.gitignore_all_dir ];
 then
     echo "prepare gitignore"
     exist_files ".config/git/ignore"
