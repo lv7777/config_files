@@ -40,6 +40,7 @@ fi
 if [ ! -d ~/.gitignore_all_dir ];
 then
     echo "prepare .config/git/*"
+    mkdir -p ~/.config/git
     exist_files ".config/git/ignore"
     ln -s `pwd`/.config/git/ignore ~/.config/git/ignore
     exist_files ".config/git/gitcommitmsg"
