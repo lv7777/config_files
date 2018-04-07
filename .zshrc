@@ -69,6 +69,7 @@ alias mkdir='mkdir -p'
 alias diff='diff -U1'
 alias cdwin="cd /mnt/c/Users/levena"
 alias code="code --user-data-dir='/usr/tmp/vscode'"
+alias du="du -h --max-depth=1"
 # TODO: get current user in windows
 
 
