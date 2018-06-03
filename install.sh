@@ -7,7 +7,7 @@ exist_files() {
     then
         echo "$1 is exist. cp and rm"
         cp ~/$1 ~/$1.bak
-        #rm ~/$1
+        rm ~/$1
     fi
 }
 
@@ -39,9 +39,12 @@ fi
 
 if [ ! -d ~/.gitignore_all_dir ];
 then
-    echo "prepare gitignore"
+    echo "prepare .config/git/*"
+    mkdir -p ~/.config/git
     exist_files ".config/git/ignore"
     ln -s `pwd`/.config/git/ignore ~/.config/git/ignore
+    exist_files ".config/git/gitcommitmsg"
+    ln -s `pwd`/.config/git/gitcommitmsg ~/.config/git/gitcommitmsg
 
     mkdir -p ~/.gitignore_all_dir
     git clone https://github.com/github/gitignore.git \
@@ -49,3 +52,4 @@ then
 else
     echo "gitignore is aleady installed? check dir"
 fi
+
