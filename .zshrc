@@ -92,6 +92,9 @@ function mkcd() {
   fi
 }
 
+#gcc shorter
+function gc() { gcc -Wall -o ${1%.c} $@; }
+
 # git設定
 #RPROMPT="%{${fg[blue]}%}[%~]%{${reset_color}%}"
 autoload -Uz vcs_info
