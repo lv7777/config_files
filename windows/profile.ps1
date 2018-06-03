@@ -1,1 +1,1 @@
-/mnt/c/Users/levena/Documents/WindowsPowerShell/profile.ps1
+C:/Users/levena/Documents/WindowsPowerShell/profile.ps1
