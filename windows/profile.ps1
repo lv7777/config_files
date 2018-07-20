@@ -28,7 +28,7 @@ function psconf {
 }
 
 function ep {
-    explorer.exe ./
+    start .
 }
 
 
