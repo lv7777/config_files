@@ -13,20 +13,26 @@
     * gitconfig
 
 * vimrc
-
+* .tmux.conf
+* fish.config
 # not included
 
-
+* intelliJ(phpstrom)
+* nvim
+* nautilus(included gsettings?)
+* gsettings?
 * eclipse
 * VisualStudio
 * vscode
-* firefoxのプロファイル
+* firefox profile
 * febe
 
-* google
+* google chrome settings
 * edge
 * PSIDE
 * flstudio
 * unity 
-* fish.config
 * bashrc
+* QTTabBar
+
+...etc
