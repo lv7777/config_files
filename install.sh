@@ -20,10 +20,6 @@ ln -s `pwd`/.gitconfig ~/
 exist_files ".vimrc"
 ln -s `pwd`/.vimrc ~/
 
-#TODO
-#mkdir -p ~/.config/fish/
-#install oh-my-fish
-#curl -L https://get.oh-my.fish | fish
 #ln -s `pwd`/.config/fish/config.fish.zsh ~/.config/fish/config.fish
 
 if [ ! -d ~/.vim_runtime/repos/github.com/Shougo/dein.vim/bin/ ];
@@ -53,3 +49,6 @@ else
     echo "gitignore is aleady installed? check dir"
 fi
 
+echo "nautilus setting"
+gsettings set org.gnome.nautilus.preferences always-use-location-entry true
+gsettings set org.gnome.desktop.background show-desktop-icons true
