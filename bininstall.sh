@@ -84,4 +84,20 @@ case $ANSER in
 	break;;
 esac
 
+echo "do U custmize 4 CTF? [Y/n]"
+read ANSER
+case $ANSER in
+	"" | "Y" | "y" | "yes" | "Yes" | "YES" )	
+		apt-get install strace -y
+		#apt-get install  build-essential libtool g++ gcc texinfo curl wget automake autoconf python python-dev git subversion unzip virtualenvwrapper lsb-release -y
+		#manage-tools install tor
+		apt-get install torbrowser-launcher -y
+		mv ~/.local/share/torbrowser/tbb/x86_64/tor-browser_en-US/Browser/start-tor-browser ~/.local/share/torbrowser/tbb/x86_64/tor-browser_en-US/Browser/start-tor-browser.old
+		cp ./
+	break;;
+	* )
+		echo "skip";
+	exit
+	break;;
+esac
 
