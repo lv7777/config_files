@@ -7,7 +7,7 @@ case $ANSER in
 		apt-get install chromium -y	
 	break;;
 	* )
-	exit
+	echo "skip"
 	break;;
 esac
 echo "do U install DockerCE? [Y/n]"
@@ -25,7 +25,7 @@ case $ANSER in
 		apt-get install docker-ce
 	break;;
 	* )
-	exit
+	echo "skip"
 	break;;
 esac
 
@@ -45,6 +45,42 @@ sudo apt-get install code # or code-insiders
 #apt-get install -f
 	break;;
 	* )
+	echo "skip"
+	break;;
+esac
+
+
+echo "do U install ctf-script? [Y/n]"
+read ANSER
+case $ANSER in
+	"" | "Y" | "y" | "yes" | "Yes" | "YES" )	
+		git clone https://github.com/zardus/ctf-tools.git
+		ctf-tools/bin/manage-tools setup && source ~/.bashrc && manage-tools list
+	break;;
+	* )
+		echo "skip";
 	exit
 	break;;
 esac
+
+
+echo "do U install ctf-script? [Y/n]"
+read ANSER
+case $ANSER in
+	"" | "Y" | "y" | "yes" | "Yes" | "YES" )	
+		# if you error occured , you can ignored, and you can open as root!!!
+		mkdir -p $HOME/tools/chrome
+		cd $HOME/tools/chrome
+		wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+		dependencies=$(dpkg -I google-chrome-stable_current_amd64.deb | grep --color=never "^ Depends" | sed -e "s/ Depends://g" | tr ',' '\n' | sed -e "s/ (>.\+)//g" | tr -d '\n')
+		sudo apt -y install $dependencies
+		sudo dpkg -i google-chrome-stable_current_amd64.deb
+		cd -
+	break;;
+	* )
+		echo "skip";
+	exit
+	break;;
+esac
+
+
