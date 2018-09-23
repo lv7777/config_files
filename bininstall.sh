@@ -93,7 +93,20 @@ case $ANSER in
 		#manage-tools install tor
 		apt-get install torbrowser-launcher -y
 		mv ~/.local/share/torbrowser/tbb/x86_64/tor-browser_en-US/Browser/start-tor-browser ~/.local/share/torbrowser/tbb/x86_64/tor-browser_en-US/Browser/start-tor-browser.old
-		cp ./start-tor-browser ~/.local/share/torbrowser/tbb/x86_64/tor-browser_en-US/Browser/start-tor-browser 
+		cp ./start-tor-browser ~/.local/share/torbrowser/tbb/x86_64/tor-browser_en-US/Browser/start-tor-browser
+	break;;
+	* )
+		echo "skip";
+	exit
+	break;;
+esac
+
+echo "do U install WebFuck? [Y/n]"
+read ANSER
+case $ANSER in
+	"" | "Y" | "y" | "yes" | "Yes" | "YES" )	
+		git clone https://github.com/m---/webfuck.git
+		#add now shell google-chrome --load-extension=~/webfuck/src/ --no-sandbox
 	break;;
 	* )
 		echo "skip";
