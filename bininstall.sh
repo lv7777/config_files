@@ -75,6 +75,7 @@ case $ANSER in
 		dependencies=$(dpkg -I google-chrome-stable_current_amd64.deb | grep --color=never "^ Depends" | sed -e "s/ Depends://g" | tr ',' '\n' | sed -e "s/ (>.\+)//g" | tr -d '\n')
 		sudo apt -y install $dependencies
 		sudo dpkg -i google-chrome-stable_current_amd64.deb
+		apt --fix-broken install
 		cd -
 	break;;
 	* )
