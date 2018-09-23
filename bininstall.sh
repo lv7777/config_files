@@ -93,7 +93,7 @@ case $ANSER in
 		#manage-tools install tor
 		apt-get install torbrowser-launcher -y
 		mv ~/.local/share/torbrowser/tbb/x86_64/tor-browser_en-US/Browser/start-tor-browser ~/.local/share/torbrowser/tbb/x86_64/tor-browser_en-US/Browser/start-tor-browser.old
-		cp ./
+		cp ./start-tor-browser ~/.local/share/torbrowser/tbb/x86_64/tor-browser_en-US/Browser/start-tor-browser 
 	break;;
 	* )
 		echo "skip";
