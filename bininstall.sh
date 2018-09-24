@@ -133,3 +133,29 @@ case $ANSER in
 	exit
 	break;;
 esac
+
+echo "do U install anyenvs? [Y/n]"
+read ANSER
+case $ANSER in
+	"" | "Y" | "y" | "yes" | "Yes" | "YES" )	
+		git clone https://github.com/riywo/anyenv ~/.anyenv
+		echo 'export PATH="$HOME/.anyenv/bin:$PATH"' >> ~/.bashrc
+	break;;
+	* )
+		echo "skip";
+	exit
+	break;;
+esac
+
+# TODO: install programing languages,php,ruby,node etc.. using anyenv
+echo "do U install rust? [Y/n]"
+read ANSER
+case $ANSER in
+	"" | "Y" | "y" | "yes" | "Yes" | "YES" )	
+		curl https://sh.rustup.rs -sSf | sh
+	break;;
+	* )
+		echo "skip";
+	exit
+	break;;
+esac
