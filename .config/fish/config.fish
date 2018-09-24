@@ -1,4 +1,8 @@
 set fish_theme fishface
+fish_vi_key_bindings
+
+set -x LANG ja_JP.utf8 
+
 # alias TODO: porting alias from zsh
 alias viconf='nvim ~/.config/fish/config.fish'
 alias l='ls -ltr --color=auto'
@@ -22,3 +26,19 @@ alias diff='diff -U1'
 #if wsl...
 #alias cdwin="cd /mnt/c/Users/levena"
 alias du="du -h --max-depth=1"
+
+set -x PATH $HOME/.anyenv/bin $PATH
+
+#GOENV
+set -x PATH $HOME/.anyenv/envs/goenv/bin/ $PATH
+goenv rehash >/dev/null ^&1
+
+set -x NDENV_ROOT "/root/.anyenv/envs/ndenv"
+set -x PATH $PATH "/root/.anyenv/envs/ndenv/bin"
+set -x PATH $NDENV_ROOT/shims $PATH
+
+
+function history-merge --on-event fish_preexec
+  history --save
+  history --merge
+end
