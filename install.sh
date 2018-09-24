@@ -20,6 +20,9 @@ ln -s `pwd`/.gitconfig ~/
 exist_files ".vimrc"
 ln -s `pwd`/.vimrc ~/
 
+exist_files ".tmux.conf"
+ln -s `pwd`/.tmux.conf ~/
+
 #ln -s `pwd`/.config/fish/config.fish.zsh ~/.config/fish/config.fish
 
 if [ ! -d ~/.vim_runtime/repos/github.com/Shougo/dein.vim/bin/ ];
