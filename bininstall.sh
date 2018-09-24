@@ -33,16 +33,16 @@ echo "do U install vscode? [Y/n]"
 read ANSER
 case $ANSER in
 	"" | "Y" | "y" | "yes" | "Yes" | "YES" )	
-curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
-sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
-sudo apt-get install apt-transport-https
-sudo apt-get update
-sudo apt-get install code # or code-insiders
-#OR
-#wget -o vscode.deb URL
-#dpdk -i vscode.deb
-#apt-get install -f
+		curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+		sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
+		sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+		sudo apt-get install apt-transport-https
+		sudo apt-get update
+		sudo apt-get install code # or code-insiders
+		#OR
+		#wget -o vscode.deb URL
+		#dpdk -i vscode.deb
+		#apt-get install -f
 	break;;
 	* )
 	echo "skip"
@@ -114,3 +114,22 @@ case $ANSER in
 	break;;
 esac
 
+echo "do U install phpStorm OR intellij? [P(hpStorm)/i(ntelliJ)/n]"
+read ANSER
+case $ANSER in
+	"" | "Y" | "y" | "yes" | "Yes" | "YES"  | "P"  | "PhpStorm" | "PHPSTORM" | "phpstorm" )	
+		apt-get install snap
+		systemctl start snapd
+		snap install phpstorm --classic
+		#/snap/phpstorm/current/bin/phpstorm.sh
+	break;;
+	"i" | "intelliJ" | "INTELLIJ" | "intellij" )
+		apt-get install snap
+		systemctl start snapd
+		snap install intellij-idea-community --classic --edge
+		#/snap/intellij-idea-community/current/bin/idea.sh
+	* )
+		echo "skip";
+	exit
+	break;;
+esac
