@@ -8,7 +8,8 @@
 [core]
     editor = vim
     whitespace = trailing-space,space-before-tab,indent-with-non-tab
-#   autocrlf = input TODO:
+    autocrlf = input
+    symlinks = true
 #   if your git is under 1.7, check under comment
 #   excludesfile=~/.gitignore_global
 [commit]
