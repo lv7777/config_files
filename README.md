@@ -31,14 +31,17 @@
 * edge
 * PSIDE
 * flstudio
+   * soundfont/serum|sylenth|vst preset(maybe isolate to sub repo)
 * unity 
 * bashrc
 * QTTabBar
+* conemu
+* cmder
 
 ...etc
 
 ### profile.ps1's link create cmd
-Œ»İ‚Íƒn[ƒhƒRƒs[‚Å‘Î‰(¢‘ãŠÇ—‚Å‚«‚È‚¢‚½‚ß)
-**‰º‹L‚ÌƒXƒNƒŠƒvƒg‚Íƒ†[ƒU[‚ğ•ÏX‚µ‚Ä‚©‚çÀs‚·‚é‚±‚Æ**
+ç¾åœ¨ã¯ãƒãƒ¼ãƒ‰ã‚³ãƒ”ãƒ¼ã§å¯¾å¿œ(ä¸–ä»£ç®¡ç†ã§ããªã„ãŸã‚)
+**ä¸‹è¨˜ã®ã‚¹ã‚¯ãƒªãƒ—ãƒˆã¯ãƒ¦ãƒ¼ã‚¶ãƒ¼ã‚’å¤‰æ›´ã—ã¦ã‹ã‚‰å®Ÿè¡Œã™ã‚‹ã“ã¨**
 
  `New-Item -Path "C:\Users\levena\work\config_files_with_up_edition\windows\profile.ps1" -ItemType SymbolicLink -Value "C:\Users\levena\Documents\WindowsPowerShell\profile.ps1"`
